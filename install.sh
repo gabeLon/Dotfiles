@@ -13,10 +13,10 @@ fi
 homedir=$1
 
 # dotfiles directory
-dotfiledir=${homedir}/Dotfiles
+dotfiledir=${homedir}/dotfiles
 
 # list of files/folders to symlink in ${homedir}
-files="bash_profile bashrc bash_prompt aliases vimrc private"
+files="bash_profile bashrc bash_prompt aliases vimrc private vim"
 
 # change to the dotfiles directory
 echo "Changing to the ${dotfiledir} directory"
