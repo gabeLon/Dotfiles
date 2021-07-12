@@ -16,7 +16,7 @@ homedir=$1
 dotfiledir=${homedir}/dotfiles
 
 # list of files/folders to symlink in ${homedir}
-files="bash_profile bashrc bash_prompt aliases vimrc private vim"
+files="bash_profile bashrc bash_prompt aliases private"
 
 # change to the dotfiles directory
 echo "Changing to the ${dotfiledir} directory"
@@ -28,6 +28,9 @@ for file in ${files}; do
     echo "Creating symlink to $file in home directory."
     ln -sf ${dotfiledir}/.${file} ${homedir}/.${file}
 done
+
+# create symlink for vimrc file (will overwrite old one)
+ln -sf ${dotfiledir}/.vim/vimrc ${homedir}/.vimrc
 
 # Download Git Auto-Completion
 curl "https://raw.githubusercontent.com/git/git/master/contrib/completion/git-completion.bash" > ${homedir}/.git-completion.bash
