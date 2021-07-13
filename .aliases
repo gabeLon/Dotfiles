@@ -4,6 +4,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias cl='clear'
 alias ojs='cd /var/www'
+alias code='cd /Users/gabe/Google\ Drive/Mi\ unidad/Gabe/Code'
 
 # Detect which `ls` flavor is in use
 if ls --color > /dev/null 2>&1; then # GNU `ls`
