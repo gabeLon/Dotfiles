@@ -25,6 +25,10 @@ Plug 'alvan/vim-closetag'
 Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
+Plug 'junegunn/goyo.vim' 
+Plug 'plasticboy/vim-markdown'
+Plug 'godlygeek/tabular'
+Plug 'reedes/vim-pencil'
 call plug#end()
 
 filetype plugin indent on
@@ -44,7 +48,7 @@ let mapleader=" "
 set noerrorbells visualbell t_vb=
 
 " mappings"
-nmap <leader>ev :tabedit ~/.vim/vimrc<cr>
+nmap <leader>ev :tabedit ~/.vimrc<cr>
 nmap <leader>tc :tabc<cr>
 nmap <leader><space> :nohlsearch<cr>		
 nmap <leader>tn :tab new<cr>
@@ -71,6 +75,7 @@ set encoding=utf-8
 set fileencoding=utf-8
 
 " sane editing
+"au BufRead,BufNewFile *.md setlocal textwidth=80
 set tabstop=4
 set shiftwidth=4
 set softtabstop=4
@@ -225,3 +230,10 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 " Tamaño por defecto del terminal
 set termwinsize=10x0
 map <leader>te :belowright terminal<CR>
+
+" auto source after writting changes to vimrc
+autocmd! bufwritepost .vimrc source %
+set conceallevel=2
+let g:vim_markdown_conceal = 2
+let g:vim_markdown_conceal_code_blocks = 2
+au FileType markdown let g:indentLine_setConceal= 2
