@@ -13,7 +13,6 @@ Plug 'itchyny/lightline.vim'
 Plug 'joshdick/onedark.vim'
 Plug 'ap/vim-buftabline'
 Plug 'airblade/vim-gitgutter'
-Plug 'preservim/nerdtree'
 Plug 'jiangmiao/auto-pairs'
 Plug 'dense-analysis/ale'
 Plug 'majutsushi/tagbar'
@@ -197,23 +196,14 @@ map <leader>n :call ToggleNetrw() <CR>
 
 let g:netrw_banner = 0
 let g:netrw_liststyle = 3
-let g:netrw_browse_split = 4
+let g:netrw_browse_split = 0
 let g:netrw_altv = 1
 let g:netrw_winsize = 18
 
 augroup ProjectDrawer
   autocmd!
-  autocmd VimEnter * :Vexplore
+  autocmd VimEnter * :Explore
 augroup END
-
-
-"function! StartUp()
-"    if 0 == argc()
-"        NERDTree
-"    end
-"endfunction
-"autocmd VimEnter * call StartUp()
-
 
 " ale
 map <C-e> <Plug>(ale_next_wrap)
