@@ -202,7 +202,7 @@ let g:netrw_winsize = 18
 
 augroup ProjectDrawer
   autocmd!
-  autocmd VimEnter * :Explore
+  autocmd VimEnter * :call ToggleNetrw()
 augroup END
 
 " ale
@@ -233,7 +233,7 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 
 " Tamaño por defecto del terminal
-set termwinsize=15x0
+set termsize=15x0
 map <leader>te :belowright terminal<CR>
 
 " auto source after writting changes to vimrc
