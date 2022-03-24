@@ -1,0 +1,4 @@
+cd                                                                                                                                                        
+git clone git@github.com:gabeLon/dotfiles.git                                                                                                             
+cd dotfiles/                                                                                                                                              
+. install.sh ~ 
