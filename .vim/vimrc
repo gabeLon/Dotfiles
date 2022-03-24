@@ -26,8 +26,8 @@ Plug 'maxmellon/vim-jsx-pretty'
 Plug 'ctrlpvim/ctrlp.vim'
 Plug 'tpope/vim-surround'
 Plug 'junegunn/goyo.vim' 
-Plug 'plasticboy/vim-markdown'
 Plug 'godlygeek/tabular'
+Plug 'plasticboy/vim-markdown'
 Plug 'reedes/vim-pencil'
 call plug#end()
 
@@ -233,6 +233,8 @@ map <leader>te :belowright terminal<CR>
 
 " auto source after writting changes to vimrc
 autocmd! bufwritepost .vimrc source %
+
+" vim_markdown
 set conceallevel=2
 let g:vim_markdown_conceal = 2
 let g:vim_markdown_conceal_code_blocks = 2
