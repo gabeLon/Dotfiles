@@ -14,6 +14,7 @@ multipass exec $instance_name -- /bin/bash -c '
     read -p "Enter multipass instance name again: " instance_name
     curl -i -H "Authorization: token $github_multipass_token" --data "{\"title\":\"Multipass_$instance_name_`date +%Y%m%d%H%M%S`\",\"key\":\"`cat ~/.ssh/id_rsa.pub`\"}" https://api.github.com/user/keys
     cd
+    curl -u gabelon:jjQDX9DRkZSJwMYTpcBQ -X POST -H "Content-Type: application/json" -d  "{\"label\":\"Multipass_$instance_name_`date +%Y%m%d%H%M%S`\",\"key\":\"`cat ~/.ssh/id_rsa.pub`\"}" https://api.bitbucket.org/2.0/users/gabelon/ssh-keys
     git clone git@github.com:gabeLon/dotfiles.git
     cd dotfiles/
     . install.sh ~ 
