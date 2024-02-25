@@ -164,9 +164,13 @@ endfunction
 
 " move through split windows
 nmap <leader><Up> :wincmd k<CR>
+nmap <leader>k :wincmd k<CR>
 nmap <leader><Down> :wincmd j<CR>
+nmap <leader>j :wincmd j<CR>
 nmap <leader><Left> :wincmd h<CR>
+nmap <leader>h :wincmd h<CR>
 nmap <leader><Right> :wincmd l<CR>
+nmap <leader>l :wincmd l<CR>
 
 " move through buffers
 nmap <leader><Left><Left> :bp!<CR>
@@ -233,7 +237,7 @@ inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 
 " Tamaño por defecto del terminal
-set termsize=15x0
+set termwinsize=15x0
 map <leader>te :belowright terminal<CR>
 
 " auto source after writting changes to vimrc
